@@ -1,0 +1,9 @@
+.mainContent {
+    width: 1000px; 
+    height: auto;
+    margin: auto;
+    background-color: gray;
+    text-align: center;
+    align-content: center;
+    border-radius: 10px;
+}

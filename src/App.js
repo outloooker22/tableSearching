@@ -1,31 +1,26 @@
+import React, {Component} from "react";
+import UserTable from "./components/userTable.js";
+import usersDB from "./functions/usersDB.js"
 
+class App extends Component {
 
-function App() {
-  return (
-    <div style={{
-      width: "1000px", 
-      margin: "auto",
-      backgroundColor: "gray",
-      textAlign: "center",
-    }}> 
+constructor (props) {
+    super(props)
+    this.state = {
+        usersState: usersDB,
+    }
+}
 
-      <button> <p> Отобразить таблицу </p> </button>
-      <button> <p> Отобразить таблицу </p> </button>
-      <button> <p> Отобразить таблицу </p> </button>
-      <button> <p> Отобразить таблицу </p> </button>
-      <button> <p> Отобразить таблицу </p> </button>
-      <button> <p> Отобразить таблицу </p> </button>
-      <button> <p> Отобразить таблицу </p> </button>
-      <button> <p> Отобразить таблицу </p> </button>
-      <button> <p> Отобразить таблицу </p> </button>
-      <button> <p> Отобразить таблицу </p> </button>
-      <button> <p> Отобразить таблицу </p> </button>
-      <button> <p> Отобразить таблицу </p> </button>
-      <button> <p> Отобразить таблицу </p> </button>
-      <button> <p> Отобразить таблицу </p> </button>
+render () {
+return (
+    <div class='mainContent'>
 
+      <label> Запрос для поиска:   </label>
+      <input type="text"></input>
+
+      <UserTable users={this.state.usersState}/>
     </div>
-  );
+  )}  
 }
 
 export default App;
