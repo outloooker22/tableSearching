@@ -10,15 +10,15 @@
 
 p {
     text-align: left;
-    padding-left: 5%;
+    padding-left: 4%;
+}
+
+.p1 {
+    padding-top: 1%;
 }
 
 table {
     table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
-}
-
-label {
-    padding-top: 2%;
 }

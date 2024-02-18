@@ -3,7 +3,7 @@ import React, {Component} from "react"
 export default class ShowUserTable extends Component {
 
 render () {
-    let usersDB = this.props.usersDB
+    let usersDB = this.props.usersDB //в переменную перенесена таблица, кот. нужно вывести этим компонентом
     return (
         <div> 
             <table>
@@ -17,7 +17,7 @@ render () {
             </tr>
             </thead>
             <tbody>
-                {usersDB.map((user) => {
+                {usersDB.map((user) => { //перебираем каждого пользователя, выводя данные о нем в таблицу
                     return (
                         <tr>
                             <td> {user.id} </td>
