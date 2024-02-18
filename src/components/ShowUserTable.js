@@ -1,22 +1,23 @@
 import React, {Component} from "react"
 
-export default class UserTable extends Component {
+export default class ShowUserTable extends Component {
 
 render () {
-    let data = this.props.users
+    let usersDB = this.props.usersDB
     return (
-        <table>
+        <div> 
+            <table>
             <thead> <tr>
-                <th> id </th>
-                <th> ФИО </th>
-                <th> Возраст </th>
-                <th> Пол </th>
-                <th> Номер телефона </th>
-                <th> Адрес </th>
+                <th scope="col"> id </th>
+                <th scope="col"> ФИО </th>
+                <th scope="col"> Возраст </th>
+                <th scope="col"> Пол </th>
+                <th scope="col"> Номер телефона </th>
+                <th scope="col"> Адрес </th>
             </tr>
             </thead>
             <tbody>
-                {data.map((user) => {
+                {usersDB.map((user) => {
                     return (
                         <tr>
                             <td> {user.id} </td>
@@ -30,6 +31,7 @@ render () {
                 })}
             </tbody>
         </table>
+        </div>
     )
 }
 }
